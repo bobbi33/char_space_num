@@ -1,0 +1,27 @@
+#include "stdafx.h"
+
+
+int main(){
+	char c;
+	int space = 0;
+	int num = 0;
+	int chara = 0;
+	int other =0;
+
+	while((c = getchar()) != '\n'){
+		if(c == ' '){
+			space++;
+		}else if((c <= 57) &&(c >= 48)){
+			num++;
+		}else if(((c <= 90) && (c >= 65)) || ( (c <= 122) && (c >= 97))){
+			chara++;
+		}else{
+			other++;
+		}
+	}
+
+	printf("space is %d, number is %d, character is %d, others is %d\n",space, num, chara,other);
+
+	return 0;
+}
+
